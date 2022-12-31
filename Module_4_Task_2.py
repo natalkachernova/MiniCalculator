@@ -2,23 +2,24 @@ import sys
 import logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', filename="calculator.log")
 
-def minicalculator(x, y, op):    
+def minicalculator(x, y, op):  
+    log_str = ""
     if op in ('1', '2', '3', '4'):
         if op == '1':
-            log_str = "Додаю ",x," та ",y
+            log_str = f"Додаю {x} та {y}"
             logging.info(log_str)
             print("Результат: %.2f" % (x+y))
         elif op == '2':
-            log_str = 'Віднімаю ',x,' та ',y
+            log_str = f"Віднімаю {x} та {y}"
             logging.info(log_str)
             print("Результат: %.2f" % (x-y))
         elif op == '3':
-            log_str = 'Множу ',x,' та ',y
+            log_str = f"Множу {x} та {y}"
             logging.info(log_str)
             print("Результат: %.2f" % (x*y))
         elif op == '4':
             if y != 0:
-                log_str = 'Ділю ',x,' та ',y
+                log_str = f"Ділю {x} та {y}"
                 logging.info(log_str)
                 print("Результат: %.2f" % (x/y))
             else:
